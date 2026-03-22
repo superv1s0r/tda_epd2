@@ -15,14 +15,16 @@ Web responsive de una pagina sobre rutas gastronomicas locales en Sevilla.
 - `index.html`: pagina principal
 - `assets/css/styles.css`: estilos personalizados
 - `assets/js/main.js`: validacion del formulario y toast
-- `docs/memoria.md`: memoria tecnica del proyecto
+- `docs/memoria.md`: memoria tecnica del proyecto en formato .md
+- `docs/memoria.pdf`: memoria en formato PDF
+- `docs/memoria.tex`: fichero LaTeX que se compiló en PDF
 - `.github/workflows/deploy-pages.yml`: despliegue automatico a GitHub Pages
 
 ## Como ejecutar en local
 Abre `index.html` en el navegador.
 
 ## Publicacion en GitHub Pages
-Si decide replicar esta página a tráves de GitHub Pages, tiene que seguir los siguientes pasos 
+Si desea replicar la página, puede seguir estos pasos:
 
 1. Sube el repositorio a GitHub.
 2. Asegura que la rama principal es `main`.
