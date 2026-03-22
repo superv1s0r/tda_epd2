@@ -24,8 +24,9 @@ Abre `index.html` en el navegador.
 ## Publicacion en GitHub Pages
 1. Sube el repositorio a GitHub.
 2. Asegura que la rama principal es `main`.
-3. Ve a `Settings > Pages` y selecciona `GitHub Actions` como fuente.
-4. Haz push a `main`. El workflow `Deploy static site to GitHub Pages` publicara la web.
+3. Ve a `Settings > Pages` y en `Build and deployment` selecciona `Deploy from a branch`.
+4. En `Branch` selecciona `gh-pages` y carpeta `/(root)`. Guarda los cambios.
+5. Haz push a `main`. El workflow `Deploy static site to GitHub Pages` actualizara la rama `gh-pages` automaticamente.
 
 ## Requisitos EPD2 cubiertos
 - Uso de Bootstrap 5.3
