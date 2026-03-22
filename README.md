@@ -22,6 +22,8 @@ Web responsive de una pagina sobre rutas gastronomicas locales en Sevilla.
 Abre `index.html` en el navegador.
 
 ## Publicacion en GitHub Pages
+Si decide replicar esta página a tráves de GitHub Pages, tiene que seguir los siguientes pasos 
+
 1. Sube el repositorio a GitHub.
 2. Asegura que la rama principal es `main`.
 3. Ve a `Settings > Pages` y en `Build and deployment` selecciona `Deploy from a branch`.
