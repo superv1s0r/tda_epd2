@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sabores de Barrio: guia de mercados y cocina local en Sevilla. Proyecto EPD2 con Bootstrap 5.3."
+    />
+    <title>Sabores de Barrio | EPD2 Bootstrap 5.3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="hero-wrap">
+      <nav class="navbar navbar-expand-lg" aria-label="Navegacion principal">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <span class="brand-mark" aria-hidden="true">SB</span>
+            <span>Sabores de Barrio</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#menuLateral"
+            aria-controls="menuLateral"
+            aria-label="Abrir menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navDesktop">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+              <li class="nav-item"><a class="nav-link" href="#rutas">Rutas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sabores">Sabores</a></li>
+              <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reserva">Reserva</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="menuLateral"
+        aria-labelledby="menuLateralLabel"
+      >
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="menuLateralLabel">Menu rapido</h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#rutas">Rutas del mes</a></li>
+            <li class="list-group-item"><a href="#sabores">Sabores locales</a></li>
+            <li class="list-group-item"><a href="#agenda">Agenda gastronomica</a></li>
+            <li class="list-group-item"><a href="#reserva">Reserva tu plaza</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container pb-5">
+        <nav aria-label="Ruta de navegacion" class="pt-2">
+          <ol class="breadcrumb breadcrumb-custom mb-4">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#rutas">Experiencias</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sabores de Barrio</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-4" id="contenido">
+          <div class="col-12 col-lg-6">
+            <p class="eyebrow mb-2">Proyecto Web EPD2</p>
+            <h1 class="display-5 fw-bold mb-3">Descubre mercados, hornos y tabernas con alma local</h1>
+            <p class="lead mb-4">
+              Una plataforma para planificar rutas de comida real por Sevilla: pequenos productores,
+              historia viva y talleres para cocinar con temporada.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="#reserva">Quiero mi ruta</a>
+              <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">
+                Ver presentacion
+              </button>
+            </div>
+            <div class="alert alert-warning mt-4 mb-0" role="alert">
+              <strong>Atencion:</strong> plazas limitadas para la ruta "Mercado + Taller" del sabado.
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div id="heroCarousel" class="carousel slide shadow-soft" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#heroCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Imagen 1"
+                ></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+              </div>
+              <div class="carousel-inner rounded-4">
+                <div class="carousel-item active">
+                  <img
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100"
+                    alt="Puesto de mercado con frutas y verduras frescas"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100"
+                    alt="Persona cocinando en una cocina abierta"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100"
+                    alt="Mesa con platos locales listos para compartir"
+                  />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-5" id="rutas">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+            <div>
+              <h2 class="h1 mb-2">Rutas destacadas</h2>
+              <p class="mb-0 text-secondary">Tres planes para conocer la cocina local con contexto cultural.</p>
+            </div>
+            <span class="badge text-bg-dark fs-6">12 experiencias activas</span>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="card h-100 route-card">
+                <div class="card-body">
+                  <h3 class="h4 card-title">Mercado de Triana en profundidad</h3>
+                  <p class="card-text">
+                    Recorrido con una cocinera local para entender producto, precio justo y tecnicas de conservacion.
+                  </p>
+                  <p class="mb-3"><i class="bi bi-clock" aria-hidden="true"></i> 2h 30m</p>
+                  <a href="#reserva" class="btn btn-outline-dark">Reservar plaza</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="card h-100 route-card">
+                <div class="card-body">
+                  <h3 class="h4 card-title">Tapas de autor y memoria obrera</h3>
+                  <p class="card-text">
+                    Ruta guiada por 4 casas de comida donde conviven recetas clasicas y cocina creativa.
+                  </p>
+                  <p class="mb-3"><i class="bi bi-clock" aria-hidden="true"></i> 3h</p>
+                  <a href="#reserva" class="btn btn-outline-dark">Reservar plaza</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="card h-100 route-card">
+                <div class="card-body">
+                  <h3 class="h4 card-title">Pan, aceite y postre andaluz</h3>
+                  <p class="card-text">
+                    Taller practico para amasar, catar aceite virgen extra y preparar tocino de cielo en equipo.
+                  </p>
+                  <p class="mb-3"><i class="bi bi-clock" aria-hidden="true"></i> 4h</p>
+                  <a href="#reserva" class="btn btn-outline-dark">Reservar plaza</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 section-contrast" id="sabores">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            <div class="col-12 col-lg-6">
+              <h2 class="h1 mb-3">Sabores por temporada</h2>
+              <p class="mb-4">
+                Seleccion mensual curada por chefs y nutricionistas para comer mejor sin perder identidad local.
+              </p>
+
+              <ul class="nav nav-pills mb-3" id="saboresTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="primavera-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#primavera"
+                    type="button"
+                    role="tab"
+                    aria-controls="primavera"
+                    aria-selected="true"
+                  >
+                    Primavera
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="verano-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#verano"
+                    type="button"
+                    role="tab"
+                    aria-controls="verano"
+                    aria-selected="false"
+                  >
+                    Verano
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="otono-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#otono"
+                    type="button"
+                    role="tab"
+                    aria-controls="otono"
+                    aria-selected="false"
+                  >
+                    Otono
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content p-4 rounded-4 bg-white shadow-soft" id="saboresTabContent">
+                <div class="tab-pane fade show active" id="primavera" role="tabpanel" aria-labelledby="primavera-tab" tabindex="0">
+                  <h3 class="h5">Menu recomendado</h3>
+                  <p>Gazpacho verde, tortilla de esparragos trigueros y fresas con naranja amarga.</p>
+                </div>
+                <div class="tab-pane fade" id="verano" role="tabpanel" aria-labelledby="verano-tab" tabindex="0">
+                  <h3 class="h5">Menu recomendado</h3>
+                  <p>Salmorejo de remolacha, caballa marinada y helado artesanal de limon.</p>
+                </div>
+                <div class="tab-pane fade" id="otono" role="tabpanel" aria-labelledby="otono-tab" tabindex="0">
+                  <h3 class="h5">Menu recomendado</h3>
+                  <p>Crema de calabaza asada, guiso de garbanzos y membrillo al horno.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <h3 class="h4 mb-3">Impacto medido este trimestre</h3>
+              <p class="mb-2 d-flex justify-content-between"><span>Productores locales incluidos</span><strong>78%</strong></p>
+              <div class="progress mb-3" role="progressbar" aria-label="Productores locales" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 78%"></div>
+              </div>
+
+              <p class="mb-2 d-flex justify-content-between"><span>Participantes recurrentes</span><strong>64%</strong></p>
+              <div class="progress mb-3" role="progressbar" aria-label="Participantes recurrentes" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 64%"></div>
+              </div>
+
+              <p class="mb-2 d-flex justify-content-between"><span>Talleres con plazas completas</span><strong>91%</strong></p>
+              <div class="progress mb-4" role="progressbar" aria-label="Talleres completos" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 91%"></div>
+              </div>
+
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                      Que incluye cada ruta?
+                    </button>
+                  </h2>
+                  <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Incluye guia, degustacion principal, material didactico y un mapa descargable de comercios locales.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                      Hay opciones vegetarianas?
+                    </button>
+                  </h2>
+                  <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Si. En el formulario puedes indicar restricciones alimentarias y preferencias.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="agenda">
+        <div class="container">
+          <h2 class="h1 mb-4">Agenda de abril</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+              <caption>
+                Calendario de actividades abiertas al publico
+              </caption>
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Actividad</th>
+                  <th scope="col">Lugar</th>
+                  <th scope="col">Plazas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>05/04</td>
+                  <td>Ruta mercado + cocina rapida</td>
+                  <td>Triana</td>
+                  <td>8 disponibles</td>
+                </tr>
+                <tr>
+                  <td>12/04</td>
+                  <td>Cata de aceite y pan de masa madre</td>
+                  <td>Alameda</td>
+                  <td>3 disponibles</td>
+                </tr>
+                <tr>
+                  <td>19/04</td>
+                  <td>Recetas familiares de Semana Santa</td>
+                  <td>San Lorenzo</td>
+                  <td>Lista de espera</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 section-contrast" id="reserva">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-lg-5">
+              <h2 class="h1 mb-3">Reserva tu plaza</h2>
+              <p class="mb-4">Completa el formulario y te enviamos confirmacion por correo en menos de 24 horas.</p>
+              <ul class="list-group list-group-numbered">
+                <li class="list-group-item">Selecciona ruta y fecha preferida.</li>
+                <li class="list-group-item">Indica necesidades alimentarias.</li>
+                <li class="list-group-item">Recibe email con instrucciones y punto de encuentro.</li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <form class="row g-3 needs-validation p-4 rounded-4 bg-white shadow-soft" id="reservaForm" novalidate>
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre" required />
+                  <div class="invalid-feedback">Escribe tu nombre para continuar.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required />
+                  <div class="invalid-feedback">Introduce un email valido.</div>
+                </div>
+
+                <div class="col-md-7">
+                  <label for="ruta" class="form-label">Ruta seleccionada</label>
+                  <select class="form-select" id="ruta" required>
+                    <option value="" selected disabled>Elige una opcion</option>
+                    <option>Mercado de Triana en profundidad</option>
+                    <option>Tapas de autor y memoria obrera</option>
+                    <option>Pan, aceite y postre andaluz</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona una ruta.</div>
+                </div>
+
+                <div class="col-md-5">
+                  <label for="personas" class="form-label">Numero de personas</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-people" aria-hidden="true"></i></span>
+                    <input type="number" min="1" max="8" class="form-control" id="personas" required />
+                    <div class="invalid-feedback">Indica entre 1 y 8 personas.</div>
+                  </div>
+                </div>
+
+                <div class="col-12 form-floating">
+                  <textarea class="form-control" placeholder="Necesidades" id="necesidades" style="height: 110px"></textarea>
+                  <label for="necesidades">Necesidades alimentarias o movilidad</label>
+                </div>
+
+                <div class="col-12 form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="politica" required />
+                  <label class="form-check-label" for="politica">Acepto la politica de privacidad y contacto</label>
+                  <div class="invalid-feedback">Debes aceptar la politica para enviar la reserva.</div>
+                </div>
+
+                <div class="col-12 d-grid d-sm-flex gap-2">
+                  <button class="btn btn-primary" type="submit">Enviar reserva</button>
+                  <button class="btn btn-outline-dark" type="reset">Limpiar formulario</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <p class="mb-0">Sabores de Barrio - Proyecto academico EPD2 (Bootstrap 5.3)</p>
+        <p class="mb-0"><a href="docs/memoria.md">Ver memoria tecnica</a></p>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="videoModalLabel">Sobre este proyecto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            Este sitio se ha disenado para practicar Bootstrap 5.3, Gestalt, color, tipografia y accesibilidad WCAG.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="toastReserva" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">Reserva enviada. En breve recibiras un correo de confirmacion.</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
